@@ -32,7 +32,7 @@ public class Main {
     static class RootHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
-            String response = "Hello from Java + Jenkins + Docker!";
+            String response = "Hello, Jenkins CI with Docker! build " + System.currentTimeMillis();
             byte[] bytes = response.getBytes("UTF-8");
 
             // 设置响应头和响应体
